@@ -1,2 +1,0 @@
-tracking_module
--DPYTHON_EXECUTABLE=/usr/bin/python3 -DCATKIN_DEVEL_PREFIX=/home/ez/project/tracking/devel -DCMAKE_INSTALL_PREFIX=/home/ez/project/tracking/install -G Unix Makefiles
