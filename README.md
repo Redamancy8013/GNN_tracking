@@ -1,7 +1,7 @@
 # GNN_Tracking
 
 <div align="center">
-  <img src="[https://github.com/Redamancy8013/GNN_tracking/blob/main/visualization.jpg)">
+  <img src="https://github.com/Redamancy8013/GNN_tracking/blob/main/visualization.jpg">
 </div>
 
 This project visualizes the real-time object tracking with point clouds only. It uses gnn-pmb filter to improve the stability and accuracy of the tracker.
