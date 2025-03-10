@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="NUSCENES_DIR" default="/home/ez/project/dataset/nuscenes"/>
+    <arg name="NUSCENES_VER" default="v1.0-mini"/>
+    <arg name="UPDATE_FREQUENCY" default="8.0"/>
+
+    <node pkg="tracking_module" type="PubInfo.py" name="PubInfoNode" output="screen">
+        <param name="NUSCENES_DIR" value="$(arg NUSCENES_DIR)"/>
+        <param name="NUSCENES_VER" value="$(arg NUSCENES_VER)"/>
+        <param name="UPDATE_FREQUENCY" value="$(arg UPDATE_FREQUENCY)"/>
+    </node>
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find tracking_module)/rviz/rviz.rviz"/>
+    <node pkg="tracking_module" type="Pose2tfNode.py" name="Pose2tfNode" output="screen" respawn="false" respawn_delay="0">
+    </node>
+
+    <node pkg="tracking_module" type="gnn.py" name="GnnPmbNode" output="screen">
+    </node>
+    <!-- <node pkg="tracking_module" type="gui_controller_node.py" name="gui_controller_node" output="screen" respawn="false" respawn_delay="0">
+
+    </node> -->
+</launch>
